@@ -7,7 +7,7 @@ function Header() {
   return (
     <div className="header">
       <Link to="/">
-      <div className="logo">Movie Logo</div>
+      <div className="logo">Back6 Movies</div>
       </Link>
       <div className="user-image">
         <img src={user} alt="user" />
