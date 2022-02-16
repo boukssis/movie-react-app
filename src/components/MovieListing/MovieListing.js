@@ -5,8 +5,7 @@ import  MovieCard  from "../MovieCard/MovieCard";
 import './MovieListing.scss'
 function MovieListing() {
   const movies = useSelector(getAllMovies);
-  console.log("movies",movies);
-  let renderMovies = "";
+   let renderMovies = "";
 
   renderMovies =
     movies.Response === "True" ? (
