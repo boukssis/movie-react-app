@@ -11,16 +11,19 @@ function App() {
   return (
     <div className="App">
       <Router>
-        <Header/>
-        <Routes>
-        <Route path='/' element={<Home/>} />
-          <Route path="/movie/:imbdID" element={<MovieDetail/>} />
-          <Route path="*" element={<PageNotFound/>} />
-        </Routes>
+        <Header />
+        <div className="containe">
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie/:imbdID" element={<MovieDetail />} />
+            <Route path="*" element={<PageNotFound />} />
+          </Routes>
+        </div>
+
         <Footer />
       </Router>
     </div>
   );
 }
-  
+
 export default App;
