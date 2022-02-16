@@ -50,9 +50,15 @@ const movieSlice = createSlice({
     [fetchAsyncMovies.rejected]: (state, { payload }) => {
         console.log("Rejected");
       },
+
+      [fetchAsyncSeries.fulfilled]: (state, { payload }) => {
+        return { ...state, shows: payload };
+      },
   },
 });
 
 export const { addMovies } = movieSlice.actions;
 export const getAllMovies = (state) => state.movies.movies;
+export const getAllShows = (state) => state.movies.shows;
+
 export default movieSlice.reducer;

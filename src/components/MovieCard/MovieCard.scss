@@ -1,26 +1,31 @@
-.card-item{
-    background:rgb(41, 41, 46);
-    cursor:pointer
+.card-item {
+  background: rgb(41, 41, 46);
+  cursor: pointer;
+  transition: all 0.3;
+
+  &:hover {
+    transform: scale(1.1);
+    transition: all 0.3;
+  }
 }
 
-.card-top{
-    height: 300px;
-    img{
-        height: 100%;
-        width: 100%;
-    }
+.card-top {
+  height: 300px;
+  img {
+    height: 100%;
+    width: 100%;
+  }
 }
 
-.card-bottom{
-    padding: 20px;
+.card-bottom {
+  padding: 20px;
 }
 
-.card-info{
-    color: white;
-    h4{
-        font-size: 22px;
-        font-weight: 400;
-        margin-bottom: 10px;
-    }
+.card-info {
+  color: white;
+  h4 {
+    font-size: 22px;
+    font-weight: 400;
+    margin-bottom: 10px;
+  }
 }
-
