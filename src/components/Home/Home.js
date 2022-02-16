@@ -1,9 +1,14 @@
 import React, {useEffect} from 'react'
 import movieApi from "../../common/APIs/MovieApi"
 import {APIKey} from "../../common/APIs/MovieApiKey"
+import {useDispatch} from 'react-redux'
+import { addMovies } from '../../features/movies/movieSlice'
+import MovieListing from '../MovieListing/MovieListing'
 
 
 function Home() {
+
+  const dispatch = useDispatch()
 useEffect(()=>{
   const movieText ="Harry"
   const fetchMovies= async ()=>{
@@ -11,16 +16,16 @@ useEffect(()=>{
     .catch((err)=>{
       console.log(err)
     })
-    console.log("resp",resp);
+    dispatch(addMovies(resp.data))
   }
   fetchMovies()
 },[])
 
   return (
     <div>
-      <h1>
-        Home
-      </h1>
+   
+       <MovieListing />
+    
       </div>
   )
 }
